@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "wulver.macalester.edu",
+  "port": "5111",
+  "target": "/home/shoop/445s19/445s19-s8",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "shoop-445s19-s8",
+  "password": "G(Ub8X{yw9",
+  "watch": [],
+  "transport": "scp"
+}

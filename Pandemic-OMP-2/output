@@ -1,0 +1,357 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 81.58      1.06     1.06                             main
+  2.69      1.10     0.04  2218978     0.02     0.06  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&)
+  2.31      1.13     0.03  9123578     0.00     0.00  void trng::detail::static_assertion<true>()
+  1.92      1.15     0.03  2325948     0.01     0.01  trng::int_math::power<2147483647, 123567893>::operator()(int) const
+  1.54      1.17     0.02  2007256     0.01     0.01  trng::uniform_int_dist::param_type::d() const
+  1.54      1.19     0.02      251    79.73    79.73  find_infected(global_t*)
+  1.15      1.21     0.02  2076906     0.01     0.08  double trng::utility::uniformco<double, trng::yarn2>(trng::yarn2&)
+  0.77      1.22     0.01  2445584     0.00     0.01  trng::yarn2::step()
+  0.77      1.23     0.01  2379465     0.00     0.00  int trng::int_math::modulo<2147483647, 2>(unsigned long)
+  0.77      1.24     0.01  2332271     0.00     0.03  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::addin(trng::yarn2&)
+  0.77      1.25     0.01  2165388     0.00     0.07  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&)
+  0.77      1.26     0.01  1982077     0.01     0.01  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate_max()
+  0.77      1.27     0.01  1940246     0.01     0.01  trng::uniform_int_dist::param_type::a() const
+  0.77      1.28     0.01  1927693     0.01     0.10  int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&)
+  0.77      1.29     0.01     3080     3.25     3.25  trng::yarn2::backward()
+  0.77      1.30     0.01                             void trng::utility::throw_this<std::runtime_error>(std::runtime_error const&)
+  0.38      1.30     0.01  2432320     0.00     0.00  trng::int_math::modulo_helper<2147483647, 0>::modulo(unsigned long)
+  0.00      1.30     0.00  2421593     0.00     0.00  trng::int_math::modulo_helper<2147483647, 1>::modulo(unsigned long)
+  0.00      1.30     0.00  2406548     0.00     0.02  trng::yarn2::operator()()
+  0.00      1.30     0.00  2387830     0.00     0.00  int trng::int_math::modulo<2147483647, 1>(unsigned long)
+  0.00      1.30     0.00  1981657     0.00     0.00  trng::utility::epsilon<double>::val()
+  0.00      1.30     0.00  1954260     0.00     0.01  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::cc_norm()
+  0.00      1.30     0.00  1939445     0.00     0.00  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::eps()
+  0.00      1.30     0.00  1858629     0.00     0.01  trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm()
+  0.00      1.30     0.00     7741     0.00     0.00  trng::int_math::modulo_invers(int, int)
+  0.00      1.30     0.00     5540     0.00     0.02  trng::yarn2::jump(unsigned long long)
+  0.00      1.30     0.00     1506     0.00     6.70  trng::yarn2::split(unsigned int, unsigned int)
+  0.00      1.30     0.00     1408     0.00     0.00  void trng::int_math::gauss<2>(int*, int*, int)
+  0.00      1.30     0.00     1283     0.00     0.00  trng::uniform_int_dist::param_type::param_type(int, int)
+  0.00      1.30     0.00     1163     0.00     0.00  trng::uniform_int_dist::uniform_int_dist(int, int)
+  0.00      1.30     0.00      251     0.00     0.00  susceptible(global_t*, const_t*, stats_t*)
+  0.00      1.30     0.00      251     0.00     0.00  update_days_infected(global_t*, const_t*)
+  0.00      1.30     0.00      251     0.00     0.00  move(global_t*, const_t*)
+  0.00      1.30     0.00      251     0.00     0.00  infected(global_t*, const_t*, stats_t*)
+  0.00      1.30     0.00        1     0.00     0.00  init_array(global_t*, const_t*)
+  0.00      1.30     0.00        1     0.00     0.00  init_check(global_t*)
+  0.00      1.30     0.00        1     0.00     0.00  parse_args(global_t*, const_t*, int, char**)
+  0.00      1.30     0.00        1     0.00     0.00  show_results(global_t*, stats_t*)
+  0.00      1.30     0.00        1     0.00     0.00  allocate_array(global_t*, const_t*, display_t*)
+  0.00      1.30     0.00        1     0.00     0.00  init(global_t*, const_t*, stats_t*, display_t*, int*, char***)
+  0.00      1.30     0.00        1     0.00     0.00  cleanup(global_t*, const_t*, display_t*)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2015 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.77% of 1.30 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.2    1.06    0.23                 main [1]
+                0.01    0.19 1927693/1927693     int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [2]
+                0.02    0.00     251/251         find_infected(global_t*) [12]
+                0.00    0.01    1506/1506        trng::yarn2::split(unsigned int, unsigned int) [13]
+                0.00    0.00    1163/1163        trng::uniform_int_dist::uniform_int_dist(int, int) [36]
+                0.00    0.00     251/251         move(global_t*, const_t*) [39]
+                0.00    0.00     251/251         susceptible(global_t*, const_t*, stats_t*) [37]
+                0.00    0.00     251/251         infected(global_t*, const_t*, stats_t*) [40]
+                0.00    0.00     251/251         update_days_infected(global_t*, const_t*) [38]
+                0.00    0.00       1/1           init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+                0.00    0.00       1/1           show_results(global_t*, stats_t*) [44]
+                0.00    0.00       1/1           cleanup(global_t*, const_t*, display_t*) [47]
+-----------------------------------------------
+                0.01    0.19 1927693/1927693     main [1]
+[2]     15.4    0.01    0.19 1927693         int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [2]
+                0.02    0.14 2076906/2076906     double trng::utility::uniformco<double, trng::yarn2>(trng::yarn2&) [3]
+                0.02    0.00 2007256/2007256     trng::uniform_int_dist::param_type::d() const [11]
+                0.01    0.00 1940246/1940246     trng::uniform_int_dist::param_type::a() const [17]
+-----------------------------------------------
+                0.02    0.14 2076906/2076906     int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [2]
+[3]     12.3    0.02    0.14 2076906         double trng::utility::uniformco<double, trng::yarn2>(trng::yarn2&) [3]
+                0.01    0.13 2165388/2165388     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&) [4]
+-----------------------------------------------
+                0.01    0.13 2165388/2165388     double trng::utility::uniformco<double, trng::yarn2>(trng::yarn2&) [3]
+[4]     11.1    0.01    0.13 2165388         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&) [4]
+                0.04    0.09 2218978/2218978     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&) [5]
+                0.00    0.01 1858629/1858629     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm() [18]
+-----------------------------------------------
+                0.04    0.09 2218978/2218978     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&) [4]
+[5]      9.6    0.04    0.09 2218978         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&) [5]
+                0.01    0.05 2332271/2332271     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::addin(trng::yarn2&) [6]
+                0.03    0.00 9123578/9123578     void trng::detail::static_assertion<true>() [8]
+-----------------------------------------------
+                0.01    0.05 2332271/2332271     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&) [5]
+[6]      4.6    0.01    0.05 2332271         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::addin(trng::yarn2&) [6]
+                0.00    0.05 2406548/2406548     trng::yarn2::operator()() [7]
+-----------------------------------------------
+                0.00    0.05 2406548/2406548     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::addin(trng::yarn2&) [6]
+[7]      3.8    0.00    0.05 2406548         trng::yarn2::operator()() [7]
+                0.03    0.01 2325948/2325948     trng::int_math::power<2147483647, 123567893>::operator()(int) const [9]
+                0.01    0.01 2435115/2445584     trng::yarn2::step() [10]
+-----------------------------------------------
+                0.03    0.00 9123578/9123578     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&) [5]
+[8]      2.3    0.03    0.00 9123578         void trng::detail::static_assertion<true>() [8]
+-----------------------------------------------
+                0.03    0.01 2325948/2325948     trng::yarn2::operator()() [7]
+[9]      2.3    0.03    0.01 2325948         trng::int_math::power<2147483647, 123567893>::operator()(int) const [9]
+                0.00    0.01 2387830/2387830     int trng::int_math::modulo<2147483647, 1>(unsigned long) [22]
+-----------------------------------------------
+                0.00    0.00   10469/2445584     trng::yarn2::jump(unsigned long long) [23]
+                0.01    0.01 2435115/2445584     trng::yarn2::operator()() [7]
+[10]     1.5    0.01    0.01 2445584         trng::yarn2::step() [10]
+                0.01    0.00 2379465/2379465     int trng::int_math::modulo<2147483647, 2>(unsigned long) [14]
+-----------------------------------------------
+                0.02    0.00 2007256/2007256     int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [2]
+[11]     1.5    0.02    0.00 2007256         trng::uniform_int_dist::param_type::d() const [11]
+-----------------------------------------------
+                0.02    0.00     251/251         main [1]
+[12]     1.5    0.02    0.00     251         find_infected(global_t*) [12]
+-----------------------------------------------
+                0.00    0.01    1506/1506        main [1]
+[13]     0.8    0.00    0.01    1506         trng::yarn2::split(unsigned int, unsigned int) [13]
+                0.01    0.00    3080/3080        trng::yarn2::backward() [19]
+                0.00    0.00    5540/5540        trng::yarn2::jump(unsigned long long) [23]
+                0.00    0.00    1408/1408        void trng::int_math::gauss<2>(int*, int*, int) [34]
+-----------------------------------------------
+                0.01    0.00 2379465/2379465     trng::yarn2::step() [10]
+[14]     0.8    0.01    0.00 2379465         int trng::int_math::modulo<2147483647, 2>(unsigned long) [14]
+                0.00    0.00 2421593/2421593     trng::int_math::modulo_helper<2147483647, 1>::modulo(unsigned long) [30]
+-----------------------------------------------
+                0.01    0.00 1982077/1982077     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::cc_norm() [16]
+[15]     0.8    0.01    0.00 1982077         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate_max() [15]
+-----------------------------------------------
+                0.00    0.01 1954260/1954260     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm() [18]
+[16]     0.8    0.00    0.01 1954260         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::cc_norm() [16]
+                0.01    0.00 1982077/1982077     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate_max() [15]
+-----------------------------------------------
+                0.01    0.00 1940246/1940246     int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [2]
+[17]     0.8    0.01    0.00 1940246         trng::uniform_int_dist::param_type::a() const [17]
+-----------------------------------------------
+                0.00    0.01 1858629/1858629     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&) [4]
+[18]     0.8    0.00    0.01 1858629         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm() [18]
+                0.00    0.01 1954260/1954260     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::cc_norm() [16]
+                0.00    0.00 1939445/1939445     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::eps() [32]
+-----------------------------------------------
+                0.01    0.00    3080/3080        trng::yarn2::split(unsigned int, unsigned int) [13]
+[19]     0.8    0.01    0.00    3080         trng::yarn2::backward() [19]
+                0.00    0.00    3388/7741        trng::int_math::modulo_invers(int, int) [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     0.8    0.01    0.00                 void trng::utility::throw_this<std::runtime_error>(std::runtime_error const&) [20]
+-----------------------------------------------
+                0.01    0.00 2432320/2432320     int trng::int_math::modulo<2147483647, 1>(unsigned long) [22]
+[21]     0.4    0.01    0.00 2432320         trng::int_math::modulo_helper<2147483647, 0>::modulo(unsigned long) [21]
+-----------------------------------------------
+                0.00    0.01 2387830/2387830     trng::int_math::power<2147483647, 123567893>::operator()(int) const [9]
+[22]     0.4    0.00    0.01 2387830         int trng::int_math::modulo<2147483647, 1>(unsigned long) [22]
+                0.01    0.00 2432320/2432320     trng::int_math::modulo_helper<2147483647, 0>::modulo(unsigned long) [21]
+-----------------------------------------------
+                0.00    0.00    5540/5540        trng::yarn2::split(unsigned int, unsigned int) [13]
+[23]     0.0    0.00    0.00    5540         trng::yarn2::jump(unsigned long long) [23]
+                0.00    0.00   10469/2445584     trng::yarn2::step() [10]
+-----------------------------------------------
+                0.00    0.00 2421593/2421593     int trng::int_math::modulo<2147483647, 2>(unsigned long) [14]
+[30]     0.0    0.00    0.00 2421593         trng::int_math::modulo_helper<2147483647, 1>::modulo(unsigned long) [30]
+-----------------------------------------------
+                0.00    0.00 1981657/1981657     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::eps() [32]
+[31]     0.0    0.00    0.00 1981657         trng::utility::epsilon<double>::val() [31]
+-----------------------------------------------
+                0.00    0.00 1939445/1939445     trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm() [18]
+[32]     0.0    0.00    0.00 1939445         trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::eps() [32]
+                0.00    0.00 1981657/1981657     trng::utility::epsilon<double>::val() [31]
+-----------------------------------------------
+                0.00    0.00    3388/7741        trng::yarn2::backward() [19]
+                0.00    0.00    4353/7741        void trng::int_math::gauss<2>(int*, int*, int) [34]
+[33]     0.0    0.00    0.00    7741         trng::int_math::modulo_invers(int, int) [33]
+-----------------------------------------------
+                0.00    0.00    1408/1408        trng::yarn2::split(unsigned int, unsigned int) [13]
+[34]     0.0    0.00    0.00    1408         void trng::int_math::gauss<2>(int*, int*, int) [34]
+                0.00    0.00    4353/7741        trng::int_math::modulo_invers(int, int) [33]
+-----------------------------------------------
+                0.00    0.00    1283/1283        trng::uniform_int_dist::uniform_int_dist(int, int) [36]
+[35]     0.0    0.00    0.00    1283         trng::uniform_int_dist::param_type::param_type(int, int) [35]
+-----------------------------------------------
+                0.00    0.00    1163/1163        main [1]
+[36]     0.0    0.00    0.00    1163         trng::uniform_int_dist::uniform_int_dist(int, int) [36]
+                0.00    0.00    1283/1283        trng::uniform_int_dist::param_type::param_type(int, int) [35]
+-----------------------------------------------
+                0.00    0.00     251/251         main [1]
+[37]     0.0    0.00    0.00     251         susceptible(global_t*, const_t*, stats_t*) [37]
+-----------------------------------------------
+                0.00    0.00     251/251         main [1]
+[38]     0.0    0.00    0.00     251         update_days_infected(global_t*, const_t*) [38]
+-----------------------------------------------
+                0.00    0.00     251/251         main [1]
+[39]     0.0    0.00    0.00     251         move(global_t*, const_t*) [39]
+-----------------------------------------------
+                0.00    0.00     251/251         main [1]
+[40]     0.0    0.00    0.00     251         infected(global_t*, const_t*, stats_t*) [40]
+-----------------------------------------------
+                0.00    0.00       1/1           init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+[41]     0.0    0.00    0.00       1         init_array(global_t*, const_t*) [41]
+-----------------------------------------------
+                0.00    0.00       1/1           init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+[42]     0.0    0.00    0.00       1         init_check(global_t*) [42]
+-----------------------------------------------
+                0.00    0.00       1/1           init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+[43]     0.0    0.00    0.00       1         parse_args(global_t*, const_t*, int, char**) [43]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[44]     0.0    0.00    0.00       1         show_results(global_t*, stats_t*) [44]
+-----------------------------------------------
+                0.00    0.00       1/1           init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+[45]     0.0    0.00    0.00       1         allocate_array(global_t*, const_t*, display_t*) [45]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[46]     0.0    0.00    0.00       1         init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [46]
+                0.00    0.00       1/1           init_check(global_t*) [42]
+                0.00    0.00       1/1           parse_args(global_t*, const_t*, int, char**) [43]
+                0.00    0.00       1/1           allocate_array(global_t*, const_t*, display_t*) [45]
+                0.00    0.00       1/1           init_array(global_t*, const_t*) [41]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[47]     0.0    0.00    0.00       1         cleanup(global_t*, const_t*, display_t*) [47]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2015 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [41] init_array(global_t*, const_t*) [2] int trng::uniform_int_dist::operator()<trng::yarn2>(trng::yarn2&) [5] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate(trng::yarn2&)
+  [42] init_check(global_t*)  [23] trng::yarn2::jump(unsigned long long) [31] trng::utility::epsilon<double>::val()
+  [43] parse_args(global_t*, const_t*, int, char**) [10] trng::yarn2::step() [3] double trng::utility::uniformco<double, trng::yarn2>(trng::yarn2&)
+  [37] susceptible(global_t*, const_t*, stats_t*) [13] trng::yarn2::split(unsigned int, unsigned int) [21] trng::int_math::modulo_helper<2147483647, 0>::modulo(unsigned long)
+  [44] show_results(global_t*, stats_t*) [19] trng::yarn2::backward() [30] trng::int_math::modulo_helper<2147483647, 1>::modulo(unsigned long)
+  [12] find_infected(global_t*) [7] trng::yarn2::operator()() [33] trng::int_math::modulo_invers(int, int)
+  [45] allocate_array(global_t*, const_t*, display_t*) [8] void trng::detail::static_assertion<true>() [34] void trng::int_math::gauss<2>(int*, int*, int)
+  [38] update_days_infected(global_t*, const_t*) [20] void trng::utility::throw_this<std::runtime_error>(std::runtime_error const&) [22] int trng::int_math::modulo<2147483647, 1>(unsigned long)
+  [46] init(global_t*, const_t*, stats_t*, display_t*, int*, char***) [15] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::variate_max() [14] int trng::int_math::modulo<2147483647, 2>(unsigned long)
+  [39] move(global_t*, const_t*) [4] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co(trng::yarn2&) [17] trng::uniform_int_dist::param_type::a() const
+  [47] cleanup(global_t*, const_t*, display_t*) [32] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::eps() [11] trng::uniform_int_dist::param_type::d() const
+  [40] infected(global_t*, const_t*, stats_t*) [6] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::addin(trng::yarn2&) [9] trng::int_math::power<2147483647, 123567893>::operator()(int) const
+  [35] trng::uniform_int_dist::param_type::param_type(int, int) [16] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::cc_norm() [1] main
+  [36] trng::uniform_int_dist::uniform_int_dist(int, int) [18] trng::utility::u01xx_traits<double, 1ul, trng::yarn2>::co_norm()
